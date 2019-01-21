@@ -1,0 +1,9 @@
+int shm_open(const char *name, int oflag, mode_t mode)
+=>oflag=O_CREAT
+int ftruncate(int fd, off_t length)
+void *mmap(void *addr, size_t length, int prot, int flags, int fd, off_t offset)
+==>addr=0;flags=MAP_SHARED;fd=shm_open()
+int munmap(void *addr, size_t length)
+int close(fd)
+int shm_unlink(const char *name)
+

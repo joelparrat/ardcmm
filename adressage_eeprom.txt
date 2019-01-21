@@ -1,0 +1,129 @@
+
+00 000-007 1er capteur de temperature
+01 008-015 2em capteur de temperature
+02 016-023 3em capteur de temperature
+03 024-031 4em capteur de temperature
+04 032-039 5em capteur de temperature
+05 040-047 6em capteur de temperature
+06 048-055 7em capteur de temperature
+07 056-063 8em capteur de temperature
+08 064-071 9em capteur de temperature
+09 072-079 10e capteur de temperature
+
+10 080-087 joel + version watercooling (09) + version protocole (00)
+
+11 088...  srt[][] voir fichier eeprom
+
+* ATTENTION en hexa
+
+* SPN
+* la sortie est sur la broche (0-99)
+
+11 58=03
+11 59=05
+11 5a=06
+11 5b=09
+11 5c=0a
+11 5d=0b
+11 5e=0e
+11 5f=0f
+
+12 60=10
+12 61=04
+12 62=11
+
+* TIO
+* type entree/sortie numerique/analogique
+* in&out=dgt=0 out=anl=1 in=anl=2 in=owr=4 out=fixe=off=8 out=fixe=on=$10 out=no=$20 io=i2c=$40
+
+12 63=03
+12 64=05
+12 65=05
+12 66=05
+12 67=05
+
+13 68=05
+13 69=04
+13 6a=04
+13 6b=04
+13 6c=02
+13 6d=00
+
+* CPT
+* la sortie est pilotee par un capteur de temperature (0-9)
+* un capteur analogique (A-Z) ou un capteur numerique (a-z) ou i2c (*)
+
+13 6e=48
+13 6f=30
+
+14 70=30
+14 71=30
+14 72=30
+14 73=30
+14 74=30
+14 75=30
+14 76=30
+14 77=47
+
+15 78=63
+
+* MMN
+
+15 79=32
+15 7a=14
+15 7b=1e
+15 7c=1e
+15 7d=1e
+15 7e=1e
+15 7f=14
+
+16 80=14
+16 81=1e
+16 82=50
+16 83=00
+
+* MMX
+
+16 84=c8
+16 85=1e
+16 86=32
+16 87=32
+
+17 88=32
+17 89=32
+17 8a=14
+17 8b=1e
+17 8c=1e
+17 8d=50
+17 8e=ff
+
+* SMN
+
+17 8f=c8
+
+18 90=32
+18 91=46
+18 92=32
+18 93=32
+18 94=32
+18 95=ff
+18 96=ff
+18 97=00
+
+98=ff
+99=00
+
+* SMX
+
+9a=14
+9b=c8
+9c=c8
+9d=c8
+9e=c8
+9f=c8
+a0=00
+a1=ff
+a2=ff
+a3=00
+a4=ff
+ 

@@ -1,0 +1,47 @@
+
+0.0 Creation
+0.0	loger les actions venant du port serie
+0.0	passage de la table srt en unsigned char valeur 0-255 plutot que -128+127
+0.0	attention pour l'affichage des temperature (signee)
+0.0 amelioration parametrage
+0.0 les parametres par defaut sont lu dans ...fch/mdfprm/eeprom	(copy trace eeprom.ino)
+0.0 changement complet du protocole
+0.0 maj et rom a partir de la table srt
+0.0	corriger le changement de broche dynamique (cpt ou spn)
+0.0	prevoir une fusion avec vslprm (ajout process srvhtt)
+0.0	afficher qqpart le serveurweb et son port
+0.0	ATTENTION ttyS4 en dur
+0.0 ttyS. et ttyUSB. fonction du cts dtr
+0.0	Controler l'etat du CTS pour connaitre l'etat de la liaison serie
+0.0	Fonction w et y ok
+0.0	cacher les broche specifique arduino (ex: quartz, reset ...)
+0.0	aide broche a externaliser
+0.0	aide digital a externaliser
+0.0	ajouter quelquepart l'entree onewire -> d12
+0.0	remis un peu de couleur
+0.0	amelioration mise en page (marge)
+0.0	ajout phase pour la connection (affichage en couleur + surveillance deconnection = dsr cts)
+0.0	correction connection USB (pas de dsr ni de cts)
+0.0	Adresse Capteur le numero du capteur entre 0-10 + ajouter aide
+0.0	la table srt a ete inversee srt[A][B] --> srt[B][A]
+0.0	la description des sortie et la description des parametres a ete integree a la bblar.h
+0.0	quand on click sur LCT/MAJ/ROM changer la couleur en normale (plus rouge)
+0.0	NON lancer srvnano s'il ne tourne pas deja ???
+0.0	NON attention faire des synchro avec srvnano (semaphore)
+0.0	NON mettre la gestion de la memoire partagee dans srvnano
+0.0	NON arreter le process web quand arret du prog ???
+0.0	d17 = a3 en dgt est en sortie o pas z
+	passer en protocole 0.1 (modif avec groupe expediteur destinataire)
+	passer en eeprom 0.1 (modif par sortie, integre nen ncp nsr, ajout info en debut)
+	attention interdire la possibilite de mettre une io en entree ET en sortie
+	attention si changement broche verifier si entree (cpt) ou sortie (spn)
+	adapter la selection possible des broche en fonction du µC
+	la gestion des broches doit etre adapte a la carte (externalisation)
+	mmysrt[].old n'est pas garni
+	quand change une sortie la passer en sortie et l'ancienne en Z
+	si change etat si possible on garde la meme broche
+	interroger le contenu de l'eeprom pour etat initial (fonction w)
+	plantage si changement type sortie
+	erreur: affichage t° alors qu'il n'y a pas de capteur en eeprom (eeprom.ino n'a pas ete installe avant ard.ino)
+	si le fichier de conf n'existe pas -> erreur de segmentation
+	utiliser trdmss meme en reception ajouter 1 parametre snd ou rcv ==> ou <== reste ok

@@ -1,0 +1,46 @@
+
+// nom: ardcmm
+// long: Communication avec la carte ARDUINO
+// version: 0.0
+// creation: 04/2017
+// modification: 
+// lancement: graphique
+// but: 
+// complement: ardcmm ardprm ardsrv ardsml ard ard.ino 
+// paquet: 
+// info: 
+
+but:
+	Interfacage d'une carte Arduino (µcontroleur)
+	Communication avec la carte
+
+paquet:
+	ard.ino arduino carte nano
+	ard    ard.ino convertie en gtk
+	ardcmm gestion memoire partage et port serie (doit toujours tourner ou lancement auto ou lancer par sous prog)
+	ardprm visualisation et modification des parametres de la carte nano
+	ardsrv serveur web pour interface tablette telephonne ...
+	ardsml simulateur ard.ino carte nano 
+
+ard.ino
+	entrees avec capteurs de temperatures (10 bits)
+	entrees / sorties numeriques (1 bit)
+	entrees analogiques (10 bits 0-1023)
+	sorties analogiques (pwm 8bits 0-255)
+	
+Les fichiers:
+* pour chaque carte ou µcontroleur
+*.brc obligatoire broche avr permet de connaitre le nombre io dgt le nombre entree anl les pwm les timers
+*.rbi broche reserve arduino disable broche et io
+*.tbr affichage du texte des broches pour bascule dgl anl si click
+*.hbr affichage de l'aide au niveau des broches
+*.hio affichage de l'aide au niveau des IO
+
+Creation de 3 fichiers log de 100k
+Creation de la memoire partagee
+Initialisation des combobox (carte, liaison, dev, port)
+rempli memoire partagee en fonction de l'eeprom
+timer 1s affichage voyant connection (sortie si gi_phs == -1)
+timer 1ms reception (sortie si gi_phs < 6)
+	si message a envoyer -> envoi
+	reception message

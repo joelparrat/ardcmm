@@ -1,0 +1,45 @@
+.../cnf/mdfprm	==> sauvegarde configuration (mcu & liaison)
+
+sous .../fch/mdfprm/
+
+eeprom			==> doit refleter le contenu de l'eeprom du nano pour affichage initiale
+
+controleur.lst	==> une simple liste des mcu pour affiche des broches ...
+liaison.lst		==> une simple liste des modes de communication pour ouverture /dev/...
+index.lst		==> une simple liste des numeros des sorties
+sortie.lst		==> une simple liste des noms possible pour les sorties
+etat.lst		==> une simple liste des etats possible pour les sorties (no, off, on, 0|1, pwm)
+entree.lst		==> une simple liste des noms possible pour les entrees
+capteur.lst		==> une simple liste des noms possible pour les capteurs
+type.lst		==> une simple liste des types possible pour les capteurs
+fonction.lst	==> une simple liste des fonctions possible (NO, LCT, ECR, ROM)
+smn.lst			==> une simple liste des seuils mini
+smx.lst			==> une simple liste des seuils maxi
+broche.lst		==> une simple liste des broches arduino
+mmn.lst			==> une simple liste des mesures mini
+mmx.lst			==> une simple liste des mesures maxi
+numero.lst		==> une simple liste des numero de broche arduino
+
+*.brc			==> * contenu du fichier controleur.lst
+
+sous .../icn/
+
+mdfprm.png
+
+pgris.png
+prouge.png
+pvert.png
+pbleu.png
+
+sous /tmp/
+
+avrsnd		==> temporaire transmission entre les process
+avrrcv		==> temporaire transmission entre les process
+
+log dans /var/local/log/mdfprm1
+
+Device sous /dev/
+
+ttyS0		==> port serie
+ttyUSB0		==> post USB
+

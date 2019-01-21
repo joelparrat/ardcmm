@@ -1,0 +1,101 @@
+
+*
+{
+	background-color: red;
+	border-color: shade (mix (rgb (34, 255, 120), #fff, 0.5), 0.9);
+}
+
+.entry:selected
+{
+	color: darker (@selected_fg_color);
+	background-color: lighter (rgba (50%, 32%, 35%, 0.9));
+}
+
+GtkButton
+{
+}
+
+#some-widget-name,
+GtkLabel#title-label
+{
+}
+
+.button
+{
+	background-image: -gtk-gradient (linear, left top, left bottom, from (@bg_color), color-stop (0.5, darker (@bg_color)), to (@bg_color));
+	border-style: outlet;	/* none, solid, inset, outset */
+	background-color: white;
+}
+
+.button:hover
+{
+	transition: 300ms ease-in-out;
+	background-color: yellow;
+}
+
+.button:active
+{
+	border-style: inset;
+}
+ 
+.entry
+{
+	background-image: -gtk-gradient (radial, 0.5 0.5 0.2, 0.6 0.6 1, from (@bg_color), to (shade (@bg_color, 0.9)));
+}
+
+GtkSpinButton.button
+{
+}
+
+GtkTreeView row
+{
+}
+
+GtkNoteBook tab
+{
+}
+
+GtkTreeView row:nth-child(even)
+{
+}
+
+GtkTreeView row:nth-child(odd)
+{
+}
+
+/* These two are equivalent */
+.button:prelight,
+.button:hover
+{
+}
+
+.entry:focused
+{
+}
+
+GtkWindow > .entry:selected
+{
+}
+
+GtkTreeView column-header .button
+{
+}
+
+GtkWindow#my-window GtkCheckButton.check:prelight
+{
+}
+
+/*
+background-color
+background-image
+color
+border-color
+border-image
+border-radius
+border-width
+border-style
+padding
+margin
+transition
+*/
+
